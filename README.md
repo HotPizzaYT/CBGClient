@@ -27,4 +27,6 @@ It should pop up as a WinForms C# project. Click Build -> Bulid Solution, and it
 
 Sending messages take a second to send
 
-Message box won't focus while refreshing
+~~Message box won't focus while refreshing~~ Now fixed.
+
+WebView not caching images
