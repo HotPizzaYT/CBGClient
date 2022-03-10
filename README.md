@@ -9,11 +9,13 @@ This should work on any system with .NET 4.5 installed. If your system does not 
 
 Windows 10: Working
 
-Windows 7: ?
+Windows 8: Probably
 
-Windows Vista: ?
+Windows 7: Probably
 
-Windows XP: ?
+Windows Vista: Probably
+
+Windows XP: Not supported
 
 # How to compile
 
