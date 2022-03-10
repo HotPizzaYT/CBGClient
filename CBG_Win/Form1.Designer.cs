@@ -1,4 +1,4 @@
-﻿
+
 namespace CBG_Win
 {
     partial class Form1
