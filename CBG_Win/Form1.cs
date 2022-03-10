@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +18,9 @@ namespace CBG_Win
             InitializeComponent();
         }
         private Timer timer1;
+        private Timer inputfocus;
+
+
         public void InitTimer()
         {
             timer1 = new Timer();
@@ -25,17 +28,37 @@ namespace CBG_Win
             timer1.Interval = 1000;
             timer1.Start();
 
+
         }
+        public void InitFocus()
+        {
+            inputfocus = new Timer();
+            inputfocus.Tick += new EventHandler(inputfocus_Tick);
+            inputfocus.Interval = 100;
+            inputfocus.Start();
+        }
+
+
+        private void inputfocus_Tick(object sender, EventArgs e)
+        {
+            textBox1.Focus();
+        }
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(webBrowser1.Url === "https://1tsandrew.com/cbg/chat/innerchat.php")
+            if(webBrowser1.ReadyState == WebBrowserReadyState.Complete)
             {
                 // Is innerchat?
 
                 // If yes, refresh and focus the chatbox.
-
-                webBrowser1.Refresh();
-                textBox1.Focus();
+                if(webBrowser1.Url.ToString() == "https://1tsandrew.com/cbg/chat/innerchat.php")
+                {
+                    textBox1.Focus();
+                    webBrowser1.Refresh();
+                    textBox1.Focus();
+                }
+                
             }
             
         }
@@ -47,7 +70,8 @@ namespace CBG_Win
             */
             webBrowser1.Navigate("https://1tsandrew.com/cbg/chat/innerchat.php");
             InitTimer();
-
+            InitFocus();
+            textBox1.Focus();
 
 
 
@@ -79,6 +103,7 @@ namespace CBG_Win
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
             // webBrowser1.innerHTML
+            textBox1.Focus();
         }
 
         private async void textBox1_KeyDown(object sender, KeyEventArgs e)
