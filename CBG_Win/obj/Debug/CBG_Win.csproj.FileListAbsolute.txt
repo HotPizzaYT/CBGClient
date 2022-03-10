@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\bin\Debug\CBG_Win.exe
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\bin\Debug\CBG_Win.pdb
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\obj\Debug\CBG_Win.csprojAssemblyReference.cache
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\obj\Debug\CBG_Win.Properties.Resources.resources
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\obj\Debug\CBG_Win.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\obj\Debug\CBG_Win.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\obj\Debug\CBG_Win.exe
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\obj\Debug\CBG_Win.pdb
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\obj\Debug\CBG_Win.Form1.resources
+C:\Users\Administrator\source\repos\CBG_Win\CBG_Win\bin\Debug\CBG_Win.exe.config
