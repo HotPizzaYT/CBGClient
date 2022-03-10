@@ -30,3 +30,7 @@ Sending messages take a second to send
 ~~Message box won't focus while refreshing~~ Now fixed.
 
 WebView not caching images
+
+# Ports to other platforms
+
+Ports to other platforms (such as Linux or ARM Windows) are always welcome, just make sure to fork this project and update the code as this code is being updated.
