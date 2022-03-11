@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using System.Net.Http;
+using System.Threading.Tasks;
 namespace CBG_Win
 {
 
@@ -195,7 +196,14 @@ namespace CBG_Win
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Click an emoji to add it to your message.", "Emoji help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Click an emoji to add it to your message.\n\nFeature added 3/11/2022", "Emoji help", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText(":hpza: ");
+            textBox1.Focus();   
         }
     }
 

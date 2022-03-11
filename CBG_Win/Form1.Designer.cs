@@ -173,6 +173,7 @@ namespace CBG_Win
             this.pictureBox3.Size = new System.Drawing.Size(38, 37);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -196,6 +197,7 @@ namespace CBG_Win
             // 
             // button4
             // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button4.Location = new System.Drawing.Point(6, 346);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(47, 23);
