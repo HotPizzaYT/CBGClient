@@ -84,6 +84,8 @@ namespace CBG_Win
 
 
             HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("Cookie", "PHPSESSID=" + textBox2.Text);
+            client.DefaultRequestHeaders.Add("User-Agent", "CBGClient1.0.0");
 
             var values = new Dictionary<string, string>
                 {
@@ -108,8 +110,11 @@ namespace CBG_Win
 
         private async void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            HttpClient client = new HttpClient();
-            if(e.KeyCode == Keys.Enter)
+            HttpClient client = new HttpClient(new HttpClientHandler() { UseCookies = false })  ;
+            // MessageBox.Show(textBox2.Text);
+            client.DefaultRequestHeaders.Add("Cookie", "PHPSESSID=" + textBox2.Text + ";");
+            client.DefaultRequestHeaders.Add("User-Agent", "CBGClient1.0.0");
+            if (e.KeyCode == Keys.Enter)
             {
                 // MessageBox.Show("H");
                 
@@ -127,6 +132,33 @@ namespace CBG_Win
                 textBox1.Focus();
                 // MessageBox.Show(responseString);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
+        // public string ReturnValue { get; set; }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // ReturnValue = 
+            login loginForm = new login();
+            // login f2 = new login();
+            loginForm.Show();
+
+            // Minimize the window to prevent window from autofocusing
+            this.WindowState = FormWindowState.Minimized;
+            // this.Hide();
+        }
+
+        public string TextBoxValue
+        {
+            get { return textBox2.Text; }
+            set { textBox2.Text = value; }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
