@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using System.Net.Http;
 namespace CBG_Win
@@ -73,6 +74,14 @@ namespace CBG_Win
             InitFocus();
             textBox1.Focus();
 
+            var sessid = "";
+
+            if (File.Exists("SESS"))
+            {
+                sessid = File.ReadAllText("SESS");
+
+            }
+            textBox2.Text = sessid;
 
 
         }
@@ -159,6 +168,34 @@ namespace CBG_Win
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText(":gemS: ");
+            textBox1.Focus();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText(":sword: ");
+            textBox1.Focus();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            textBox1.AppendText(":chg: ");
+            textBox1.Focus();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Click an emoji to add it to your message.", "Emoji help", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
-
+using System.IO;
 
 namespace CBG_Win
 {
@@ -42,6 +42,9 @@ namespace CBG_Win
             if (responseString != "false")
             {
                 original.TextBoxValue = responseString;
+
+                // Write to session file for login
+                File.WriteAllText("SESS", responseString, Encoding.UTF8);
 
                 original.Show();
                 if (original.TextBoxValue == responseString)

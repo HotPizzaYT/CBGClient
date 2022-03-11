@@ -91,5 +91,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geminiS.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_sword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hpizzanew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_chungy.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
