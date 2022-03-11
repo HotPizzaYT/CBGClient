@@ -37,8 +37,24 @@ namespace CBG_Win
             var response = await client.PostAsync("https://1tsandrew.com/cbg/chat/account/lc.php", content);
             var responseString = await response.Content.ReadAsStringAsync();
             var original = Application.OpenForms.OfType<Form1>().FirstOrDefault();
-            original.TextBoxValue = textBox1.Text;
-            original.Show();
+            MessageBox.Show(responseString);
+
+            if (responseString != "false")
+            {
+                original.TextBoxValue = responseString;
+
+                original.Show();
+                if (original.TextBoxValue == responseString)
+                {
+                    original.WindowState = FormWindowState.Normal;
+                    original.Focus();
+                    this.Close();
+                }
+            } else
+            {
+                // At the time of writing, this code does not work yet!
+                MessageBox.Show("Password not valid, or all forms not filled in!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
